@@ -1,0 +1,12 @@
+var _user$project$Commands$fetch = F2(
+	function (page, search) {
+		var apiUrl = A2(
+			_elm_lang$core$Basics_ops['++'],
+			'/api/contacts?page=',
+			A2(
+				_elm_lang$core$Basics_ops['++'],
+				_elm_lang$core$Basics$toString(page),
+				A2(_elm_lang$core$Basics_ops['++'], '&search=', search)));
+		var request = A2(_elm_lang$http$Http$get, apiUrl, _user$project$Decoders$contactListDecoder);
+		return A2(_elm_lang$http$Http$send, _user$project$Messages$FetchResult, request);
+	});

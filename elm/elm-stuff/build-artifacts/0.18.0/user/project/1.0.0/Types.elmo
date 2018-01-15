@@ -1,0 +1,29 @@
+var _user$project$Types$Model = F3(
+	function (a, b, c) {
+		return {contactList: a, error: b, search: c};
+	});
+var _user$project$Types$ContactList = F4(
+	function (a, b, c, d) {
+		return {entries: a, page_number: b, total_entries: c, total_pages: d};
+	});
+var _user$project$Types$Contact = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return {id: a, first_name: b, last_name: c, gender: d, birth_date: e, location: f, phone_number: g, email: h, headline: i, picture: j};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};

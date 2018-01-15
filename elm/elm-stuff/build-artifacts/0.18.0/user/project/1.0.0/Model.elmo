@@ -1,0 +1,44 @@
+var _user$project$Model$initialContactList = {
+	entries: {ctor: '[]'},
+	page_number: 1,
+	total_entries: 0,
+	total_pages: 0
+};
+var _user$project$Model$Model = F3(
+	function (a, b, c) {
+		return {contactList: a, error: b, search: c};
+	});
+var _user$project$Model$ContactList = F4(
+	function (a, b, c, d) {
+		return {entries: a, page_number: b, total_entries: c, total_pages: d};
+	});
+var _user$project$Model$Contact = function (a) {
+	return function (b) {
+		return function (c) {
+			return function (d) {
+				return function (e) {
+					return function (f) {
+						return function (g) {
+							return function (h) {
+								return function (i) {
+									return function (j) {
+										return {id: a, first_name: b, last_name: c, gender: d, birth_date: e, location: f, phone_number: g, email: h, headline: i, picture: j};
+									};
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	};
+};
+var _user$project$Model$Success = function (a) {
+	return {ctor: 'Success', _0: a};
+};
+var _user$project$Model$Failure = function (a) {
+	return {ctor: 'Failure', _0: a};
+};
+var _user$project$Model$Requesting = {ctor: 'Requesting'};
+var _user$project$Model$NotRequested = {ctor: 'NotRequested'};
+var _user$project$Model$initialModel = {contactList: _user$project$Model$NotRequested, error: _elm_lang$core$Maybe$Nothing, search: ''};

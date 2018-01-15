@@ -20,7 +20,7 @@ defmodule PhoenixAndElm.Mixfile do
   def application do
     [
       mod: {PhoenixAndElm.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :faker, :scrivener, :scrivener_ecto, :runtime_tools]
     ]
   end
 
@@ -40,7 +40,14 @@ defmodule PhoenixAndElm.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"}
+      {:cowboy, "~> 1.0"},
+
+      # pagination
+      {:scrivener, "~> 2.0"},
+      {:scrivener_ecto, "~> 1.0"},
+
+      # stub data
+      {:faker, "~> 0.9"}
     ]
   end
 

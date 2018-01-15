@@ -17,9 +17,26 @@ defmodule PhoenixAndElmWeb do
   and import those modules here.
   """
 
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+
+      use Scrivener, page_size: 10
+    end
+  end
+
   def controller do
     quote do
       use Phoenix.Controller, namespace: PhoenixAndElmWeb
+
+      alias PhoenixAndElm.Repo
+      import Ecto
+      import Ecto.Query
+
       import Plug.Conn
       import PhoenixAndElmWeb.Router.Helpers
       import PhoenixAndElmWeb.Gettext

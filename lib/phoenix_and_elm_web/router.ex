@@ -20,7 +20,10 @@ defmodule PhoenixAndElmWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixAndElmWeb do
-  #   pipe_through :api
-  # end
+  # api xui poimi
+  scope "/api", PhoenixAndElmWeb do
+    pipe_through :api
+
+    resources "/contacts", ContactController, only: [:index]
+  end
 end

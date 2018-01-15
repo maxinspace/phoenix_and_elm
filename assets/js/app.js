@@ -19,3 +19,8 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+
+// Main is compiled by 'elm-make Main.elm --output=main.js
+import Elm from "./elm";
+const elmDiv = document.querySelector('#elm_target');
+const elmApp = Elm.Main.embed(elmDiv);
